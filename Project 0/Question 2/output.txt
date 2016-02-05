@@ -1,0 +1,2 @@
+StuID	Quiz1	Quiz2	Midterm	Final	Average	Final Grade
+8	9	100	90	2	159.75	B	

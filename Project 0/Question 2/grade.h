@@ -34,9 +34,9 @@ private:
 
 void Stuclass::input() {
     ifstream in_stream;
-    in_stream.open("input.dat");
+    in_stream.open("input.txt");
     if(in_stream.fail()){
-        cout << "Input file opening failed ."<<endl;
+        cout << "Input file opening failed."<<endl;
         exit(1);
     }
     int x;
@@ -60,13 +60,39 @@ void Stuclass::printout() {
     }
     out_stream<<"StuID\tQuiz1\tQuiz2\tMidterm\tFinal\tAverage\tFinal Grade"<<endl;
     for (int i = 0; i < numberofstudents; ++i) {
-        out_stream<<myclass->stuID<<"\t"
-        <<myclass->quiz1<<"\t"
-        <<myclass->quiz2<<"\t"
-        <<myclass->midterm<<"\t"
-        <<myclass->final<<"\t"
-        <<myclass->average<<"\t"
-        <<myclass->grade<<"\t"<<endl;
+        out_stream<<myclass[i].stuID<<"\t"
+        <<myclass[i].quiz1<<"\t"
+        <<myclass[i].quiz2<<"\t"
+        <<myclass[i].midterm<<"\t"
+        <<myclass[i].final<<"\t"
+        <<myclass[i].average<<"\t"
+        <<myclass[i].grade<<"\t"<<endl;
     }
     out_stream.close();
+}
+
+void Stuclass::calculation() {
+    for (int i = 0; i < numberofstudents ; ++i) {
+        myclass[i].average = (myclass[i].quiz1*10*.125) + (myclass[i].quiz2*10*.125) + (myclass[i].midterm*.25) + (myclass[i].final*.5);
+
+    if (myclass[i].average >=90 && myclass[i].average<=100)    {
+        myclass[i].grade = 'A';
+    }
+    else if (myclass[i].average>=80) {
+        myclass[i].grade = 'B';
+    }
+   else if (myclass[i].average>=70){
+        myclass[i].grade = 'C';
+    }
+   else if (myclass[i].average>=60){
+        myclass[i].grade = 'D';
+    }
+    else{
+        myclass[i].grade = 'F';
+    }
+    }
+}
+
+Stuclass::Stuclass() {
+
 }
