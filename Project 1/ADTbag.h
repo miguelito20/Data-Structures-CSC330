@@ -10,7 +10,9 @@ template <class ItemType>
 class ArrayBag
 {
 public:
-	ArrayBag();  //default constructor. Create an empty list.
+	ArrayBag(){
+
+	}  //default constructor. Create an empty list.
 
 	bool isEmpty() const;  // test if the bag is empty
 	
