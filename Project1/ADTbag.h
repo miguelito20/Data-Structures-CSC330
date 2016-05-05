@@ -1,0 +1,8 @@
+//
+// Created by Michael on 2/18/2016.
+//
+
+#ifndef DATA_STRUCTURES_CSC330_ADTBAG_H
+#define DATA_STRUCTURES_CSC330_ADTBAG_H
+
+#endif //DATA_STRUCTURES_CSC330_ADTBAG_H

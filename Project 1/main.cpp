@@ -51,10 +51,11 @@ void main()
 	else 
 		cout << "The bag does NOT contain the string \"seven\".\n";
 
-	cout << "Delete all items fron the bag. \n";
+	cout << "Delete all items from the bag. \n";
 	bag.clear();
 
 	displayBag(bag);
 
 
 }
+

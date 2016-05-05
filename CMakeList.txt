@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.3)
+project(Data-Structures-CSC330)
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+
+set(SOURCE_FILES main.cpp)
+add_executable(Project_0 ${SOURCE_FILES})
+add_executable(Project_1 ${SOURCE_FILES})
+add_executable(Link-Based-Array ${SOURCE_FILES})
+add_executable(Circular-Array ${SOURCE_FILES})
